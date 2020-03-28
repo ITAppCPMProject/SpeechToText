@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    tools:context=".RecordActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORD AREA"
+        android:textSize="30sp"></TextView>
+
+    <Button
+        android:id="@+id/btnStartRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORD">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnStopRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP">
+
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY AREA"
+        android:textSize="30sp"></TextView>
+
+    <Button
+        android:id="@+id/btnPLAY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP">
+
+    </Button>
+</LinearLayout>

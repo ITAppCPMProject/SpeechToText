@@ -1,0 +1,2 @@
+rootProject.name='ITApp'
+include ':app'
