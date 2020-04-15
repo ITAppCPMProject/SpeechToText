@@ -8,6 +8,7 @@ android {
     defaultConfig {
         applicationId "com.example.itapp"
         minSdkVersion 16
+        multiDexEnabled true
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
