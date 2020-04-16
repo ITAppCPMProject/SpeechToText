@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +14,17 @@ import android.view.ViewGroup;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
+import java.io.File;
+
 
 public class AudioListFragment extends Fragment {
 
     private ConstraintLayout playerSheet;
     private BottomSheetBehavior bottomSheetBehavior;
+
+    private RecyclerView audioList;
+
+    private File[] allFiles;
 
     public AudioListFragment() {
         // Required empty public constructor
@@ -39,6 +46,11 @@ public class AudioListFragment extends Fragment {
 
         playerSheet = view.findViewById(R.id.player_sheet);
         bottomSheetBehavior = BottomSheetBehavior.from(playerSheet);
+        audioList = view.findViewById(R.id.audio_list_view);
+
+        String path = getActivity().getExternalFilesDir("/").getAbsolutePath();
+        File directory = new File(path);
+        allFiles = directory.listFiles();
 
         bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
