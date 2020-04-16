@@ -6,32 +6,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RecordFragment">
 
- <ImageView
-     android:id="@+id/record_header_image"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     app:layout_constraintTop_toTopOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintEnd_toEndOf="parent"
-     android:src="@drawable/home_illustration"
-     android:layout_marginTop="64dp">
 
- </ImageView>
+    <ImageView
+        android:id="@+id/record_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/home_illustration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
 
     <TextView
         android:id="@+id/record_filename"
-        android:layout_width="191dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
+        android:layout_width="212dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
         android:gravity="center_horizontal"
         android:text="Press the mic button \n to start recording"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/record_header_image" />
-
 
     <Chronometer
         android:id="@+id/record_timer"
@@ -49,10 +50,11 @@
         android:id="@+id/record_btn"
         android:layout_width="82dp"
         android:layout_height="100dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="136dp"
         android:background="@color/white"
         android:src="@drawable/record_btn_recording"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/record_filename"
         tools:src="@drawable/record_btn_recording">
