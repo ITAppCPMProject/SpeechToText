@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -26,6 +27,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +48,6 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     private ImageButton recordBtn;
     private TextView filenameText;
 
-
     private  boolean isRecording = false;
 
     private MediaRecorder mediaRecorder;
@@ -51,6 +57,9 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
 
     private String recordPermission = Manifest.permission.RECORD_AUDIO;
+
+    private StorageReference mStorage;
+    private  String mFileName;
 
 
     public RecordFragment() {
@@ -64,6 +73,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        mStorage = FirebaseStorage.getInstance().getReference();
         return inflater.inflate(R.layout.fragment_record, container, false);
     }
 
@@ -141,6 +151,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setOutputFile(recordPath + "/" + recordFile);
         mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        mFileName=(recordPath + "/" + recordFile);
 
 
         try {
@@ -159,6 +170,25 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
+        
+        uploadAudio();
+
+
+    }
+
+    private void uploadAudio() {
+        StorageReference filepath = mStorage.child("new_audio.3gp");
+
+        Uri uri=Uri.fromFile(new File(mFileName));
+
+        filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+            }
+        });
+
+
     }
 
     private boolean checkPermissions() {

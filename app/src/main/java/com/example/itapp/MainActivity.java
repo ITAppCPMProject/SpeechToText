@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int MY_REQUEST_CODE = 7117;
     List<AuthUI.IdpConfig> providers;
-    Button btn_sign_out, btn_goToRecord;
+    Button btn_sign_out, btn_goToRecord, btn_goToStorage, btn_goToDescp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_goToStorage = (Button)findViewById(R.id.btn_GoToStorage);
+        btn_goToStorage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View w){
+                Intent intent = new Intent(MainActivity.this, DisplayRecords.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_goToDescp = (Button)findViewById(R.id.btn_GoToDescp);
+        btn_goToDescp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this, DisplayDescription.class);
+                startActivity(intent);
+            }
+        });
+
+
         //init provider
+        /*
         providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(), // Email
             new AuthUI.IdpConfig.PhoneBuilder().build(), // Phone
@@ -72,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         );
 
         showSignInOptions();
+
+         */
     }
 
     private void showSignInOptions() {
