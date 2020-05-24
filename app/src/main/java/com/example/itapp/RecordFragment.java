@@ -26,6 +26,7 @@ import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -142,15 +143,15 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss", Locale.CANADA);
         Date now = new Date();
 
-        recordFile = "Recording_" + formatter.format(now) + ".3gp";
+        recordFile = "Recording_" + formatter.format(now) + ".mp4";
 
         filenameText.setText("Recording, File Name: " + recordFile);
 
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
         mediaRecorder.setOutputFile(recordPath + "/" + recordFile);
-        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
         mFileName=(recordPath + "/" + recordFile);
 
 
@@ -177,14 +178,13 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     }
 
     private void uploadAudio() {
-        StorageReference filepath = mStorage.child("new_audio.3gp");
+        StorageReference filepath = mStorage.child("new_audio_3.mp4");
 
         Uri uri=Uri.fromFile(new File(mFileName));
 
         filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
             }
         });
 
