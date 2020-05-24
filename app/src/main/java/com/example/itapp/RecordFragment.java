@@ -143,7 +143,11 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss", Locale.CANADA);
         Date now = new Date();
 
+<<<<<<< HEAD
         recordFile = "Recording_" + formatter.format(now) + ".mp4";
+=======
+        recordFile = "Recording_" + formatter.format(now) + ".wav";
+>>>>>>> bc71cbd0426584ae0ce121659da5625941d04bda
 
         filenameText.setText("Recording, File Name: " + recordFile);
 
@@ -178,7 +182,11 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     }
 
     private void uploadAudio() {
+<<<<<<< HEAD
         StorageReference filepath = mStorage.child("new_audio_3.mp4");
+=======
+        StorageReference filepath = mStorage.child("new_audio.wav");
+>>>>>>> bc71cbd0426584ae0ce121659da5625941d04bda
 
         Uri uri=Uri.fromFile(new File(mFileName));
 

@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //init provider
-        /*
+
         providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(), // Email
             new AuthUI.IdpConfig.PhoneBuilder().build(), // Phone
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         showSignInOptions();
 
-         */
+
     }
 
     private void showSignInOptions() {
