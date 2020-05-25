@@ -57,7 +57,6 @@ public class DisplayDescription extends AppCompatActivity {
         databaseSamples= FirebaseDatabase.getInstance().getReference("Samples");
 
         adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,samplesy);
-        listView.setAdapter(adapter2);
 //        String id = ref.push().getKey();
 //        ref.child("Samples").setValue(sample2);
 
@@ -69,6 +68,7 @@ public class DisplayDescription extends AppCompatActivity {
                     for(DataSnapshot sampleSnapshot : dataSnapshot.getChildren()){
                         String cont = sampleSnapshot.child("name").getValue(String.class);
                         samplesy.add(cont);
+                        listView.setAdapter(adapter2);
 
                     }
 

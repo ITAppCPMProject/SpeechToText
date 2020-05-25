@@ -41,7 +41,6 @@ public class DisplayRecords extends AppCompatActivity {
         databaseSamples= FirebaseDatabase.getInstance().getReference("Samples");
 
         adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,samplesy);
-        listView.setAdapter(adapter2);
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -52,6 +51,7 @@ public class DisplayRecords extends AppCompatActivity {
                     String path = sampleSnapshot.child("path").getValue(String.class);
                     samplesy.add(cont);
                     samplesy.add(path);
+                    listView.setAdapter(adapter2);
 
                 }
 
