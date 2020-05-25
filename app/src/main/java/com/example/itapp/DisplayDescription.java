@@ -40,18 +40,15 @@ public class DisplayDescription extends AppCompatActivity {
 
 //        String samples[]={"Jeden", "Dwa", "Trzy"};
 
-        final ArrayList<String> samplesy = new ArrayList<>();
 
 //        samplesy.add(samples[0]);
 //        samplesy.add(samples[1]);
-
-
 //        adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,samplesy);
 //        listView.setAdapter(adapter2);
 
      //   Samples sample2= new Samples("audio1","is Mesa from more pragmatic and political","gs://it-app-cmp.appspot.com/audio1.wav");
 
-
+        final ArrayList<String> samplesy = new ArrayList<>();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference ref = database.getReference();
         databaseSamples= FirebaseDatabase.getInstance().getReference("Samples");
