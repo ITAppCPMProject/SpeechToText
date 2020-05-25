@@ -175,18 +175,15 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         mediaRecorder.stop();
         mediaRecorder.release();
         mediaRecorder = null;
-        
+
         uploadAudio();
 
 
     }
 
     private void uploadAudio() {
-<<<<<<< HEAD
+
         StorageReference filepath = mStorage.child("new_audio_3.mp4");
-=======
-        StorageReference filepath = mStorage.child("new_audio.wav");
->>>>>>> bc71cbd0426584ae0ce121659da5625941d04bda
 
         Uri uri=Uri.fromFile(new File(mFileName));
 
