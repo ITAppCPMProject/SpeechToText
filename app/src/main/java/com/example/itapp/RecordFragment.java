@@ -121,7 +121,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                     //Stop recording
                     stopRecording();
 
-                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_stopped, null));
+                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.pause1, null));
                     isRecording = false;
                 }else  {
                     //Start Recording

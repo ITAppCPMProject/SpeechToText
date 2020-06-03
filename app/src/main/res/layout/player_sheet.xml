@@ -79,15 +79,15 @@
 
     <ImageButton
         android:id="@+id/player_play_btn"
-        android:background="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@+id/player_filename"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:srcCompat="@drawable/iconplay" />
 
     <ImageButton
         android:id="@+id/imageView3"
