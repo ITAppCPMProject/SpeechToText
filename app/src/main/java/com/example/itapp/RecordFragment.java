@@ -121,13 +121,13 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                     //Stop recording
                     stopRecording();
 
-                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.pause1, null));
+                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.icons8sortright64, null));
                     isRecording = false;
                 }else  {
                     //Start Recording
                     if (checkPermissions()){
                         startRecording();
-                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.record_btn_recording, null));
+                    recordBtn.setImageDrawable(getResources().getDrawable(R.drawable.icons8pausebutton64, null));
                     isRecording = true;
                     }
                 }

@@ -32,7 +32,7 @@
             android:layout_weight="4"
             android:paddingTop="24dp"
             android:paddingBottom="24dp"
-            app:srcCompat="@drawable/redmic" />
+            app:srcCompat="@drawable/icons8audio64" />
 
         <TextView
             android:id="@+id/player_header_name"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player_filename"
-        app:srcCompat="@drawable/iconplay" />
+        app:srcCompat="@drawable/icons8sortright64" />
 
     <ImageButton
         android:id="@+id/imageView3"

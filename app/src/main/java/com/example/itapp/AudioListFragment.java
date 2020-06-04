@@ -160,7 +160,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void pauseAudio(){
         mediaPlayer.pause();
-        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.iconplay, null));
+        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8sortright64, null));
         isPlaying = false;
         seekbarHandler.removeCallbacks(updateSeekBar);
     }
@@ -168,7 +168,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void resumeAudio(){
         mediaPlayer.start();
-        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.pause1, null));
+        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8pausebutton64, null));
         isPlaying = true;
         updateRunnable();
         seekbarHandler.postDelayed(updateSeekBar, 0);
@@ -176,7 +176,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void stopAudio() {
-        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.iconplay, null));
+        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8sortright64, null));
         playerHeader.setText("Stopped");
         isPlaying = false;
         mediaPlayer.stop();
@@ -196,7 +196,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
             e.printStackTrace();
         }
 
-        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.pause1, null));
+        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8pausebutton64, null));
         playerFilename.setText(fileToPlay.getName());
         playerHeader.setText("Playing");
 

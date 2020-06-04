@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryLight">
 
     <ImageView
         android:id="@+id/list_image_view"
@@ -13,11 +14,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimaryLight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/musicfile"
-        tools:srcCompat="@drawable/musicfile" />
+        app:srcCompat="@drawable/icons8audiofile"
+        tools:srcCompat="@drawable/icons8audiofile" />
 
     <TextView
         android:id="@+id/list_title"
