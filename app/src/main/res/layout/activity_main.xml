@@ -9,6 +9,20 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textDescription6"
+        android:layout_width="133dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginBottom="580dp"
+        android:text="Sing out"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_out"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/textDescription5"
         android:layout_width="148dp"
         android:layout_height="28dp"
@@ -16,23 +30,23 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintHorizontal_bias="0.606"
         app:layout_constraintStart_toEndOf="@+id/textDescription4"
         app:layout_constraintTop_toBottomOf="@+id/btn_GoToStorage"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textDescription4"
-        android:layout_width="143dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_width="133dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="See converted text"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_GoToDescp"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <TextView
         android:id="@+id/textDescription3"
@@ -74,10 +88,10 @@
         android:text="Go to Record"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592">
+        app:layout_constraintVertical_bias="0.393">
 
     </ImageButton>
 
@@ -99,14 +113,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="320dp"
-        android:layout_height="261dp"
+        android:layout_width="288dp"
+        android:layout_height="230dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/icons8musicwindow" />
 
     <TextView
@@ -130,10 +144,10 @@
         android:text="Records storage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.595" />
 
     <ImageButton
         android:id="@+id/btn_GoToDescp"
@@ -145,9 +159,9 @@
         android:text="Descriptions storage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.548" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
