@@ -168,7 +168,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void resumeAudio(){
         mediaPlayer.start();
-        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8pausebutton64, null));
+        playBtn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.icons8pausebutton, null));
         isPlaying = true;
         updateRunnable();
         seekbarHandler.postDelayed(updateSeekBar, 0);
