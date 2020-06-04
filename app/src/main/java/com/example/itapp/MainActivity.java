@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int MY_REQUEST_CODE = 7117;
     List<AuthUI.IdpConfig> providers;
-    Button  btn_goToRecord, btn_goToStorage, btn_goToDescp;
-    ImageButton btn_sign_out;
+    ImageButton  btn_goToStorage, btn_goToDescp;
+    ImageButton btn_goToRecord, btn_sign_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_goToRecord = (Button)findViewById(R.id.btn_GoToRecord);
+        btn_goToRecord = (ImageButton)findViewById(R.id.btn_GoToRecord);
         btn_goToRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_goToStorage = (Button)findViewById(R.id.btn_GoToStorage);
+        btn_goToStorage = (ImageButton)findViewById(R.id.btn_GoToStorage);
         btn_goToStorage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View w){
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_goToDescp = (Button)findViewById(R.id.btn_GoToDescp);
+        btn_goToDescp = (ImageButton)findViewById(R.id.btn_GoToDescp);
         btn_goToDescp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

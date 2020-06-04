@@ -9,14 +9,53 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textDescription5"
+        android:layout_width="148dp"
+        android:layout_height="28dp"
+        android:text="File Storage"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toEndOf="@+id/textDescription4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_GoToStorage"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <TextView
+        android:id="@+id/textDescription4"
+        android:layout_width="143dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:text="See converted text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_GoToDescp"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <TextView
+        android:id="@+id/textDescription3"
+        android:layout_width="158dp"
+        android:layout_height="37dp"
+        android:text="Go to record"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_GoToRecord"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/textDescription2"
         android:layout_width="291dp"
         android:layout_height="148dp"
         android:gravity="center_horizontal"
-        android:text="Welcome \n in \n Speed to Text!"
+        android:text="Welcome \n in \n Speech to Text!"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,20 +64,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.048" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/btn_GoToRecord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="85dp"
+        android:background="@color/colorPrimaryLight"
+        android:src="@drawable/icons8playrecord64"
         android:text="Go to Record"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695">
+        app:layout_constraintVertical_bias="0.592">
 
-    </Button>
-
+    </ImageButton>
 
     <ImageButton
         android:id="@+id/btn_sign_out"
@@ -58,14 +99,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="368dp"
-        android:layout_height="295dp"
+        android:layout_width="320dp"
+        android:layout_height="261dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238"
+        app:layout_constraintVertical_bias="0.336"
         app:srcCompat="@drawable/icons8musicwindow" />
 
     <TextView
@@ -75,29 +116,38 @@
         android:text="With this application you can record a sound, which will then be displayed as text!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.278" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_GoToStorage"
-        android:layout_width="419dp"
-        android:layout_height="49dp"
+        android:layout_width="151dp"
+        android:layout_height="88dp"
+        android:background="@color/colorPrimaryLight"
+        android:src="@drawable/icons8musiclibrary64"
         android:text="Records storage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+        app:layout_constraintVertical_bias="0.824" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_GoToDescp"
-        android:layout_width="424dp"
-        android:layout_height="39dp"
+        android:layout_width="153dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorPrimaryLight"
+        android:src="@drawable/icons8agreement64"
         android:text="Descriptions storage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
