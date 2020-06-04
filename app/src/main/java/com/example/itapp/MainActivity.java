@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -26,14 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int MY_REQUEST_CODE = 7117;
     List<AuthUI.IdpConfig> providers;
-    Button btn_sign_out, btn_goToRecord, btn_goToStorage, btn_goToDescp;
+    Button  btn_goToRecord, btn_goToStorage, btn_goToDescp;
+    ImageButton btn_sign_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_sign_out = (Button)findViewById(R.id.btn_sign_out);
+        btn_sign_out = (ImageButton)findViewById(R.id.btn_sign_out);
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //init provider
-/*
+
         providers = Arrays.asList(
             new AuthUI.IdpConfig.EmailBuilder().build(), // Email
             new AuthUI.IdpConfig.PhoneBuilder().build(), // Phone
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         showSignInOptions();
-*/
+
 
     }
 
